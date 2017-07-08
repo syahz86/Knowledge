@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script cipta akaun percubaan SSH/VPN
-#Doctype | Malaysian Phreaker Knowledge
+#Syahz86 | GollumVPN
 #
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 
@@ -22,6 +22,6 @@ echo -e "Config OpenVPN: \033[1;31mhttp://$IP/client.ovpn\033[0m"
 echo -e "Username: \033[1;31m$User\033[0m"
 echo -e "Password: \033[1;31m$Pass\033[0m"
 echo "-----------------------------------------------"
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Syahz86 | GollumVPN | Si Tony"
 echo "==============================================="
 echo ""
