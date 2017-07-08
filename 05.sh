@@ -1,13 +1,13 @@
 #
 #!/bin/bash
 #Script mengunci akaun SSH/VPN
-#Doctype | Malaysian Phreaker Knowledge
+#Syahz86 | GollumVPN
 #
 
 read -p "Username Account going to be lock: " User
 passwd -l $User
 
 echo "==============================================="
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Syahz86 | GollumVPN | Si Tony"
 echo "==============================================="
 echo ""
