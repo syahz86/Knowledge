@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script senarai akaun aktif
-#Doctype | Malaysian Phreaker Knowledge
+#Syahz86 | GollumVPN
 #
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
@@ -40,6 +40,6 @@ do
 done
 echo "";
 echo "==============================================="
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Syahz86 | GollumVPN | Si Tony"
 echo "==============================================="
 echo ""
