@@ -1,7 +1,7 @@
 #
 #!/bin/bash
-#Doctype | malaysian Phreaker Knowledge
-# 
+#Syahz86 | GollumVPN
+#
 
 #Initialisasi Var
 export DEBIAN_FRONTEND=noninteractive
@@ -27,7 +27,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 #Set Repo
-wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/FrogyX/Knowledge/master/source.list.debian7"
+wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/syahz86/Knowledge/master/source.list.debian7"
 wget "http://www.dotdeb.org/dotdeb.gpg"
 wget "http://www.webmin.com/jcameron-key.asc"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -51,12 +51,11 @@ cd
 apt-get install figlet
 echo "clear" >> .bashrc
 echo 'figlet -k "$HOSTNAME"' >> .bashrc
-echo 'echo -e "======= Script by Doctype/FrogyX ======="' >> .bashrc
+echo 'echo -e "======= Script by Syahz86 ======="' >> .bashrc
 echo 'echo -e "Contact Us"' >> .bashrc
-echo 'echo -e "Facebook: doct.mpk"' >> .bashrc
-echo 'echo -e "Whatsapp: +60149541324"' >> .bashrc
-echo 'echo -e "Telegram: @Doctype"' >> .bashrc
-echo 'echo -e "===== Malaysian Phreaker Knowledge ====="' >> .bashrc
+echo 'echo -e "Telegram Channel: @GollumVPN"' >> .bashrc
+echo 'echo -e "Telegram: @simuncaibetollah"' >> .bashrc
+echo 'echo -e "===== GollumVPN ====="' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 
 cd
@@ -78,10 +77,10 @@ cd
 #Install Webserver
 rm /etc/nginx/sites-enabled
 rm /etc/nginx/sites-available
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/syahz86/Knowledge/master/nginx.conf"
 mkdir -p /etc/nginx/sites/main
-echo "<center><h1>Doctype | Malaysian Phreaker Knowledge</h1></center>" > /etc/nginx/sites/main/index.html
-wget -O /etc/nginx/conf.d/sites.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/sites.conf"
+echo "<center><h1>Syahz86 | GollumVPN</h1></center>" > /etc/nginx/sites/main/index.html
+wget -O /etc/nginx/conf.d/sites.conf "https://raw.githubusercontent.com/syahz86/Knowledge/master/sites.conf"
 service nginx restart
 chown -R www-data:www-data /etc/nginx/sites/main
 
@@ -94,22 +93,22 @@ service ssh restart
 cd
 
 #Install OpenVPN
-wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/FrogyX/Knowledge/master/openvpn-debian.tar"
+wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/syahz86/Knowledge/master/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/server.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/server.conf"
+wget -O /etc/openvpn/server.conf "https://raw.githubusercontent.com/syahz86/Knowledge/master/server.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE
 iptables-save > /etc/newiptables.conf
-wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/FrogyX/Knowledge/master/iptables"
+wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/syahz86/Knowledge/master/iptables"
 chmod +x /etc/network/if-up.d/iptables
 service openvpn restart
 
 #Configure OpenVPN
 cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/FrogyX/Knowledge/master/client.conf"
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/syahz86/Knowledge/master/client.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 cp client.ovpn /etc/nginx/sites/main/
 
@@ -129,24 +128,24 @@ cd
 
 #Install Squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/FrogyX/Knowledge/master/squid3.sh"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/syahz86/Knowledge/master/squid3.sh"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
 cd
 
 #Command script
-wget -O /usr/bin/Menu "https://raw.githubusercontent.com/FrogyX/Knowledge/master/Menu.sh"
-wget -O /usr/bin/01 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/01.sh"
-wget -O /usr/bin/02 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/02.sh"
-wget -O /usr/bin/03 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/03.sh"
-wget -O /usr/bin/04 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/04.sh"
-wget -O /usr/bin/05 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/05.sh"
-wget -O /usr/bin/06 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/06.sh"
-wget -O /usr/bin/07 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/07.sh"
-wget -O /usr/bin/08 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/08.sh"
-wget -O /usr/bin/09 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/09.sh"
-wget -O /usr/bin/10 "https://raw.githubusercontent.com/FrogyX/Knowledge/master/10.sh"
+wget -O /usr/bin/Menu "https://raw.githubusercontent.com/syahz86/Knowledge/master/Menu.sh"
+wget -O /usr/bin/01 "https://raw.githubusercontent.com/syahz86/Knowledge/master/01.sh"
+wget -O /usr/bin/02 "https://raw.githubusercontent.com/syahz86/Knowledge/master/02.sh"
+wget -O /usr/bin/03 "https://raw.githubusercontent.com/syahz86/Knowledge/master/03.sh"
+wget -O /usr/bin/04 "https://raw.githubusercontent.com/syahz86/Knowledge/master/04.sh"
+wget -O /usr/bin/05 "https://raw.githubusercontent.com/syahz86/Knowledge/master/05.sh"
+wget -O /usr/bin/06 "https://raw.githubusercontent.com/syahz86/Knowledge/master/06.sh"
+wget -O /usr/bin/07 "https://raw.githubusercontent.com/syahz86/Knowledge/master/07.sh"
+wget -O /usr/bin/08 "https://raw.githubusercontent.com/syahz86/Knowledge/master/08.sh"
+wget -O /usr/bin/09 "https://raw.githubusercontent.com/syahz86/Knowledge/master/09.sh"
+wget -O /usr/bin/10 "https://raw.githubusercontent.com/syahz86/Knowledge/master/10.sh"
 
 chmod +x /usr/bin/Menu
 chmod +x /usr/bin/01
