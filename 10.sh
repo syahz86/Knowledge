@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script Service Restart (OpenSSH, OpenVPN, Dropbear, Webmin & Squid)
-#Doctype | Malaysian Phreaker Knowledge
+#Syahz86 | GollumVPN
 #
 service dropbear restart
 service webmin restart
