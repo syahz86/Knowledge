@@ -1,7 +1,7 @@
 #
 #!/bin/bash
 #Script senarai akaun pelanggan
-#Doctype | Malaysian Phreaker Knowledge
+#Syahz86 | GollumVPN
 #
 
 echo "==============================================="
@@ -20,6 +20,6 @@ Total="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "-----------------------------------------------"
 echo "Total Account: $Total user"
 echo "==============================================="
-echo "Doctype | Malaysian Phreaker Knowledge | FrogyX"
+echo "Syahz86 | GollumVPN | Si Tony"
 echo "==============================================="
 echo ""
